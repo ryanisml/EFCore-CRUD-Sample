@@ -1,11 +1,12 @@
-using waterlevel_netcore.Models;
+using CRUDSample.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<ProductModel>(options => options.UseMySQL(builder.Configuration.GetConnectionString("koneksiSql")!));
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("koneksiSql")!));
 
 var app = builder.Build();
 
