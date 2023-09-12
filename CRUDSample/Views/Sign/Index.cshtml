@@ -1,0 +1,24 @@
+﻿        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-5">
+                <div class=" text-center form-block rounded">
+                    <div class="mb-3">
+                        <h3><strong>Sign In With Azure Active Directory</strong></h3>
+                    </div>
+                    <hr />
+                    @{
+                        if (TempData.Peek("Message") != null)
+                        {
+                            <div class="alert alert-@TempData.Peek("Alert") alert-dismissible fade show" role="alert">
+                                <strong>@TempData.Peek("Title")</strong> @TempData.Peek("Message")
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        }
+                    }
+                    <a asp-controller="Account" asp-action="SignIn" class="btn btn-sm btn-primary">Sign In</a>
+                </div>
+                <div class="mt-4 mt-md-5 text-center">
+                    <p class="mb-0 text-muted fw-bold">©
+                    2023 | Powered By IT - PT Kaltim Prima Coal</p>
+                </div>
+            </div>
+        </div>
