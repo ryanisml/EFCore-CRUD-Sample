@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews().AddMicrosoftIdentityUI();
 
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme).AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("koneksiSql")!));
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("koneksiSqlServer")!));
 
 var app = builder.Build();
 
