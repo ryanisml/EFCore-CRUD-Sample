@@ -20,6 +20,15 @@ local/crud-mysql
 - Run http://localhost/crud-mysql at website.
 For better application run at [Microsoft Edge](https://www.microsoft.com/en-us/edge/download)
 
+## REMINDER
+**Please remind to configure Azure Active Directory first with your tenant.**
+Please run database migration first before running application. Because `dotnet ef migrations add InitialCreate` has been initiate before you can setup migration below:
+- To running database migration you can add script
+``
+dotnet ef database update
+``
+- After migration complete you can running this program.
+
 ## Features
 - Using EF Core,
 - Using Database table migration,
