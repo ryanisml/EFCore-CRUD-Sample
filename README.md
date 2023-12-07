@@ -23,10 +23,10 @@ For better application run at [Microsoft Edge](https://www.microsoft.com/en-us/e
 ## REMINDER
 **Please remind to configure Azure Active Directory first with your tenant.**
 - Because `dotnet ef migrations add InitialCreate` has been initiate before, you can running database migration with script below:
-``
+```
 dotnet ef database update
-``
-- After migration complete you can running this program.
+```
+**After migration and azure active directory has been configure, you can running this program.**
 
 ## Features
 - Using EF Core,
