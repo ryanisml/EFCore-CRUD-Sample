@@ -8,14 +8,14 @@ namespace CRUDSample.Controllers
     {
         public IActionResult Index()
         {
-            if (User.Identity.IsAuthenticated)
+            if(User.Identity != null)
             {
-                return RedirectToAction("index", "home");
+                if (User.Identity.IsAuthenticated)
+                {
+                    return RedirectToAction("index", "home");
+                }
             }
-            else
-            {
-                return View();
-            }
+            return View();
         }
     }
 }
