@@ -64,8 +64,9 @@ You can copy and paste `appsettings.Development.json` to `appsettings.json` and 
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "koneksiSql": "{your_sql_connection_configuration}"
+    "koneksiSql": "|your_sql_connection_configuration|"
   }
 }
 ```
 - replace all `{}` to your Azure AD Configuration setting.
+- replace all `||` to SQL configuration.
